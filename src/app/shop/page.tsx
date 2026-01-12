@@ -16,7 +16,7 @@ export default async function ShopPage() {
         <section id="sec-hot-products" className="mb-16">
           <div className="flex items-center place-content-center gap-3 mb-8 text-center">
             <span className="text-3xl">🔥</span>
-            <h2 className="text-3xl font-bold text-zinc-900 dark:text-white">
+            <h2 className="text-3xl font-bold light:text-zinc-900 dark:text-white">
               Sản phẩm nổi bật
             </h2>
           </div>
@@ -38,7 +38,7 @@ export default async function ShopPage() {
         <section id="sec-categories">
           <div className="flex items-center place-content-center gap-3 mb-8">
             <span className="text-3xl">📦</span>
-            <h2 className="text-3xl font-bold text-zinc-900 dark:text-white">
+            <h2 className="text-3xl font-bold light:text-zinc-900 dark:text-white">
               Danh mục sản phẩm
             </h2>
           </div>
