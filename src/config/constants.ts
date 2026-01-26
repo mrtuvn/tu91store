@@ -3,8 +3,9 @@ export const siteConfig = {
   url: "https://tu91store.com",
   ogImage: "/og.png",
   contact: {
-    address: "90B Ngõ 92 Mai Động, TP Hà Nội",
+    address: "90B Ngõ 92 Mai Động, Phường Tương Mai, TP. Hà Nội, Việt Nam",
     phone: "0936536599",
+    phoneSale: "0907210991",
     email: "tuna9x.it@gmail.com",
   },
   social: {

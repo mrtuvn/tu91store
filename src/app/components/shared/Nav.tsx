@@ -12,6 +12,9 @@ const Nav = () => {
           <Link href="/shop">Sản phẩm</Link>
         </li>
         <li>
+          <Link href="/blog">Blog mới nhất</Link>
+        </li>
+        <li>
           <Link href="/about">Giới thiệu</Link>
         </li>
       </ul>

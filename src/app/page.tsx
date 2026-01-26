@@ -1,14 +1,18 @@
+import { siteConfig } from "@/config/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
     id: 1,
-    name: "Sâm tươi",
+    name: "Sâm tươi 6 năm",
     href: "#",
     imageSrc: "/images/products/fresh-ginseng.jpeg",
     imageAlt: "Fresh ginseng",
     price: "Liên hệ",
     color: "Non",
+    shortDescription: "Đủ size số lượng từ 4-25 củ/kg",
+    description: "Giá sâm có thể thay đổi tùy theo tỷ giá VND/KRW. Liên hệ để được báo giá chi tiết."
   },
   {
     id: 2,
@@ -66,7 +70,7 @@ export default function Home() {
                       className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
                       loading="lazy"
                     />
-                    <div className="mt-4 flex justify-between">
+                    <div className="mt-4 flex flex-col gap-2 justify-between">
                       <div>
                         <h3 className="text-sm text-gray-700">
                           <a href={product.href}>
@@ -81,14 +85,36 @@ export default function Home() {
                           {product.color}
                         </p> */}
                       </div>
+                      {product?.shortDescription && (
+                        <p>{product.shortDescription}</p>
+                      )}
                       <p className="text-sm font-medium text-gray-900">
                         <span className="font-bold">Giá:</span> Liên hệ
                       </p>
+                      {product?.description && (
+                        <p className="text-sm text-gray-500">
+                          {product.description}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h2>Thông tin liên hệ</h2>
+            <article>
+              <p className="flex items-start gap-2">
+                <span className="font-bold">Địa chỉ:</span> {siteConfig.contact.address}
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="font-bold">Điện thoại:</span> <Link className="text-blue-500 underline" href={`tel:${siteConfig.contact.phoneSale}`}>{siteConfig.contact.phoneSale}</Link> - Tu91 Store
+              </p>
+              <p className="flex items-start gap-2 hidden">MST & SDKKD: 0108566639</p>
+            </article>
           </div>
         </section>
       </main>
