@@ -7,9 +7,11 @@ import Script from "next/script";
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro-sans",
-  subsets: ["latin", "vietnamese"],
-  weight: ["300", "400", "600", "700"],
+  subsets: ["vietnamese"], // Only Vietnamese subset (includes latin)
+  weight: ["400", "600"], // Reduced to 2 weights for faster load
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -35,9 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${beVietnamPro.variable} font-body antialiased`}>
+{/* Facebook Pixel - loaded after page is interactive to not block LCP */}
         <Script
           id="facebook-pixel"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -49,16 +52,6 @@ export default function RootLayout({
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '${pixelId}');
-            `,
-          }}
-        />
-
-        {/* Track Page Views (Initial Load) */}
-        <Script
-          id="facebook-pixel-pageview"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
               fbq('track', 'PageView');
             `,
           }}

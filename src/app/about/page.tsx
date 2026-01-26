@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className="aboutPage">
       <div className="container">
         <h1 className="text-2xl font-bold mb-4">Thông tin liên hệ</h1>
-        <p className="text-sm light:text-gray-500 dark:text-gray-400">
+        <div className="text-sm light:text-gray-500 dark:text-gray-400">
           <article>
             <p className="flex items-start gap-2">
               <span className="font-bold light:text-black dark:text-white flex-0 text-nowrap">
@@ -33,7 +33,7 @@ export default function AboutPage() {
               </Link>
             </p>
           </article>
-        </p>
+        </div>
       </div>
     </div>
   );

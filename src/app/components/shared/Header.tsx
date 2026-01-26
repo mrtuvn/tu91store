@@ -14,7 +14,6 @@ const Header = () => {
               src="/t91s.png"
               alt="Tu91 Store"
               priority
-              quality={90}
               width={60}
               height={60}
             />

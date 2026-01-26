@@ -45,7 +45,7 @@ export default function BlogPage() {
         {/* Blog Posts Grid */}
         {posts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
+            {posts.map((post, index) => (
               <article
                 key={post.slug}
                 className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
@@ -60,6 +60,8 @@ export default function BlogPage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={index === 0}
+                        loading={index < 3 ? undefined : "lazy"}
                       />
                     )}
                     {/* Fallback gradient overlay */}
