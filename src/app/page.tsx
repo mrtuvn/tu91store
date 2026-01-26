@@ -103,6 +103,14 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="slogan sm:py-4 md:py-20 ">
+          <div className="container flex flex-col gap-4 items-center justify-center">
+            <h3 className="text-3xl center font-bold slogan-text text-pretty">Sức khỏe và sự hài lòng của khách hàng là ưu tiên của chúng tôi</h3>
+            <p className="text-center sub-slogan-text text-pretty">
+              Chất lượng tạo uy tín
+            </p>
+          </div>
+        </section>
         <section>
           <div className="container">
             <h2>Thông tin liên hệ</h2>
@@ -113,7 +121,7 @@ export default function Home() {
               <p className="flex items-start gap-2">
                 <span className="font-bold">Điện thoại:</span> <Link className="text-blue-500 underline" href={`tel:${siteConfig.contact.phoneSale}`}>{siteConfig.contact.phoneSale}</Link> - Tu91 Store
               </p>
-              <p className="flex items-start gap-2 hidden">MST & SDKKD: 0108566639</p>
+              <p className="items-start gap-2 hidden">MST & SDKKD: 0108566639</p>
             </article>
           </div>
         </section>
