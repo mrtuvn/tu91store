@@ -11,12 +11,12 @@ const products = [
     imageAlt: "Fresh ginseng",
     price: "Liên hệ",
     color: "Non",
-    shortDescription: "Đủ size số lượng từ 4-25 củ/kg",
-    description: "Giá sâm có thể thay đổi tùy theo tỷ giá VND/KRW. Liên hệ để được báo giá chi tiết."
+    shortDescription: "Đủ size số lượng từ 5-6-10-25 củ/kg",
+    description: "Giá sâm có thể thay đổi tùy theo tỷ giá VND/KRW. Liên hệ để được báo giá chi tiết và chọn sâm theo yêu cầu riêng."
   },
   {
     id: 2,
-    name: "Sâm đen mật ong",
+    name: "Hắc sâm thái lát tẩm mật ong",
     href: "#",
     imageSrc: "/images/products/black-ginseng.jpeg",
     imageAlt: "Black ginseng",
@@ -25,9 +25,9 @@ const products = [
   },
   {
     id: 3,
-    name: "Hồng sâm mật ong",
+    name: "Hồng sâm thái lát tẩm mật ong",
     href: "#",
-    imageSrc: "/images/products/red-ginseng.jpeg",
+    imageSrc: "/images/products/red-ginseng-honey.jpeg",
     imageAlt: "Red ginseng",
     price: "Liên hệ",
     color: "Non",
@@ -36,11 +36,29 @@ const products = [
     id: 4,
     name: "Sâm lát chia gói",
     href: "#",
-    imageSrc: "/images/products/red-ginseng2.jpeg",
+    imageSrc: "/images/products/red-ginseng.jpeg",
     imageAlt: "Sâm lát",
     price: "Liên hệ",
     color: "Non",
   },
+  {
+    id: 5,
+    name: "Sâm khô",
+    href: "#",
+    imageSrc: "/images/products/raw-red-ginseng.jpeg",
+    imageAlt: "Bổ gan",
+    price: "Liên hệ",
+    color: "Non",
+  },
+  {
+    id: 6,
+    name: "Bổ gan",
+    href: "#",
+    imageSrc: "/images/products/liver.jpeg",
+    imageAlt: "Bổ gan",
+    price: "Liên hệ",
+    color: "Non",
+  }
 ];
 
 export default function Home() {
